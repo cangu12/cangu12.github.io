@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Venta de Vestidos</title>
+    <style>
+        body {
+            background-color: #fda7fa;
+            color: #333;
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .top-header {
+            background-color: #eaf2f8;
+            font-size: 0.85rem;
+            padding: 0.5rem 2rem;
+            text-align: right;
+            color: #34495e;
+            border-bottom: 1px solid #ccc;
+        }
+
+        .top-header a {
+            margin: 0 10px;
+            color: #494949;
+            text-decoration: none;
+        }
+
+        .top-header a:hover {
+            text-decoration: underline;
+        }
+
+        header {
+            background-color: #e25fff;
+            color: #decdf3;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+            box-shadow: 0 4px 6px rgba(248, 154, 255, 0.1);
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            width: 50px;
+            height: 50px;
+            margin-right: 10px;
+        }
+
+        .logo span {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .form-container {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .form-container input[type="text"] {
+            padding: 0.5rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .form-container input[type="submit"] {
+            padding: 0.5rem 1rem;
+            background-color: #e263ff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .form-container input[type="submit"]:hover {
+            background-color: #821279;
+        }
+
+        .form-container img {
+            width: 40px;
+            height: 40px;
+        }
+
+        nav {
+            background-color: #fb69e1;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        nav a {
+            margin: 0 15px;
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        main {
+            padding: 2rem;
+            color: #333;
+        }
+
+        main h1 {
+            text-align: center;
+            color: #6e0086;
+            margin-bottom: 1rem;
+        }
+
+        .dropdown {
+            display: flex;
+            justify-content: center;
+            margin: 1rem 0;
+        }
+
+        .dropdown label {
+            margin-right: 10px;
+            font-weight: bold;
+        }
+
+        .dropdown select {
+            padding: 0.5rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .producto {
+            background-color: #fff;
+            padding: 1.5rem;
+            border-radius: 10px;
+            text-align: center;
+            flex: 1 1 calc(45% - 20px);
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s;
+        }
+
+        .producto:hover {
+            transform: scale(1.05);
+        }
+
+        .producto img {
+            width: 100%;
+            max-width: 300px;
+            height: auto;
+            margin: 1rem 0;
+            border-radius: 10px;
+        }
+
+        .producto button {
+            padding: 0.5rem 1rem;
+            background-color: #2ecc71;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .producto button:hover {
+            background-color: #27ae60;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background-color: #d6eaf8;
+            color: #2c3e50;
+            margin-top: 2rem;
+        }
+
+        footer p {
+            margin: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="top-header">
+        <a href="#">Guia de tallas</a>
+        <a href="#">Opciones</a>
+        <a href="#">Cambios y devoluciones</a>
+        <a href="#">Envios</a>
+        <a href="#">Registrate</a>
+        <a href="#">Iniciar sesion</a>
+    </div>
+
+    <header>
+        <div class="logo">
+            <img src="estrella.png" alt="Logo">
+            <span>Viva la Vida</span>
+        </div>
+        <div class="form-container">
+            <form action="#" method="get">
+                <input type="text" name="buscar" id="buscar" placeholder="Introduce tu búsqueda...">
+                <input type="submit" value="Buscar">
+                <img src="persona.png" alt="Usuario">
+                <img src="carrito.png" alt="Carrito">
+            </form>
+        </div>
+    </header>
+
+    <nav>
+        <a href="#">Inicio</a>
+        <a href="#">Vestidos</a>
+    </nav>
+
+    <main>
+        <h1>VESTIDOS</h1>
+        <div class="dropdown">
+            <label for="ordenar">Ordenar por:</label>
+            <select id="ordenar">
+                <option value="mas_vendidos">Mas Vendidos</option>
+                <option value="color">Color</option>
+                <option value="talla">Talla</option>
+                <option value="modelo">Modelo</option>
+                <option value="precio">Precio</option>
+                <option value="codigo">Codigo</option>
+            </select>
+        </div>
+
+        <div class="container">
+            <div class="producto">
+                <p>#999</p>
+                <img src="vestido1.png" alt="Vestido 1">
+                <button>Comprar</button>
+            </div>
+
+            <div class="producto">
+                <p>#100</p>
+                <img src="vestido2.png" alt="Vestido 2">
+                <button>Comprar</button>
+            </div>
+        </div>
+
+        <div class="dropdown">
+            <label for="todo">Todo:</label>
+            <select id="todo">
+                <option value="Todo">Todo</option>
+                <option value="vestidos_largos">Vestidos Largos</option>
+                <option value="vestidos_cortos">Vestidos Cortos</option>
+                <option value="vestidos_con_escote">Vestidos Con Escote</option>
+            </select>
+        </div>
+    </main>
+
+    <footer>
+        <p>Creado por Marley Guaman de 2do "D"</p>
+    </footer>
+    <h2>Formulario de Pedidos de Vestidos</h2>
+    <form action="/submit-pedido" method="POST">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required>
+
+        <label for="email">Correo Electronico:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="telefono">Telefono:</label>
+        <input type="tel" id="telefono" name="telefono" required>
+
+        <label for="talla">Talla del Vestido:</label>
+        <select id="talla" name="talla" required>
+            <option value="s">S</option>
+            <option value="m">M</option>
+            <option value="l">L</option>
+            <option value="xl">XL</option>
+        </select>
+
+        <label for="color">Color del Vestido:</label>
+        <input type="text" id="color" name="color" required>
+
+        <label for="cantidad">Cantidad:</label>
+        <input type="number" id="cantidad" name="cantidad" min="1" required>
+
+        <button type="submit">Enviar Pedido</button>
+    </form>
+    
+    <h2>Encuesta sobre la Venta de Vestidos</h2>
+    <form action="/submit-encuesta" method="POST">
+        <label for="cambiar">¿Cambiaría algo de la página?</label>
+        <textarea id="cambiar" name="cambiar" rows="4" required></textarea>
+
+        <label for="gustar">¿Le gusta la página?</label>
+        <select id="gustar" name="gustar" required>
+            <option value="si">Sí</option>
+            <option value="no">No</option>
+        </select>
+
+        <label for="agregar">¿Qué deberíamos agregar a la página?</label>
+        <textarea id="agregar" name="agregar" rows="4" required></textarea>
+
+        <button type="submit">Enviar Encuesta</button>
+    </form>
+</body>
+
+</html>
